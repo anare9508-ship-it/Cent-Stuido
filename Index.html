@@ -1,1 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cant Studio - Editor Web</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- BARRA SUPERIOR -->
+  <header>
+    <div class="painel-arquivo">
+      <span class="rotulo-arquivo">📄 Arquivo:</span>
+      <input type="text" id="nomeArquivo" class="input-nome-arquivo" value="calculos.ca">
+    </div>
+    <button class="btn-executar" onclick="executarCant()">
+      ▶ Executar Cant
+    </button>
+  </header>
+
+  <!-- ÁREA PRINCIPAL -->
+  <main>
+    <!-- EDITOR DE CÓDIGO CANT -->
+    <section class="secao-editor">
+      <div class="cabecalho-painel">Editor (.ca)</div>
+      <div class="wrapper-editor">
+        <div class="linhas-numero" id="numeracaoLinhas">1</div>
+        <textarea id="codigoSource" spellcheck="false" placeholder="Escreva os comandos da linguagem Cant aqui..."></textarea>
+      </div>
+    </section>
+
+    <!-- SAÍDA EM TEMPO REAL -->
+    <section class="secao-resultado">
+      <div class="cabecalho-painel">Navegador / Preview Web</div>
+      <div id="saidaWeb"></div>
+    </section>
+  </main>
+
+  <!-- CARREGA O MOTOR DA LINGUAGEM -->
+  <script src="cant.js"></script>
+</body>
+</html>
 
